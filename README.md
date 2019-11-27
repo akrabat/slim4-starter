@@ -7,7 +7,7 @@ This is a starter project for Slim 4 that includes [PHP-DI][1] and [Monolog][2].
 
 To create a new project :
 
-    $ composer create-project akrabat/slim4-stater my-new-project
+    $ composer create-project akrabat/slim4-starter my-new-project
     $ cd my-new-project
 
 Test using the PHP built-in server:
