@@ -12,11 +12,8 @@ use Slim\Psr7\Response;
 
 class HomePageHandler implements RequestHandlerInterface
 {
-    private $logger;
-
-    public function __construct(LoggerInterface $logger)
+    public function __construct(private LoggerInterface $logger)
     {
-        $this->logger = $logger;
     }
 
     public function handle(ServerRequestInterface $request): ResponseInterface
