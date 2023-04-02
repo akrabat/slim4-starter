@@ -24,13 +24,19 @@
         }
     },
     "require": {
-        "monolog/monolog": "^2.3",
-        "php-di/php-di": "^6.3",
-        "slim/psr7": "^1.4",
-        "slim/slim": "^4.8"
-    }
-    ,
+        "php": ">=8.0",
+        "monolog/monolog": "^2.9.1",
+        "php-di/php-di": "^6.4",
+        "slim/psr7": "^1.6",
+        "slim/slim": "^4.11",
+        "vlucas/phpdotenv": "^5.5"
+    },
     "require-dev": {
         "roave/security-advisories": "dev-master"
+    },
+    "scripts": {
+        "post-create-project-cmd": [
+            "php -r \"file_exists('.env') || copy('.env.example', '.env');\""
+        ]
     }
 }
