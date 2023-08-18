@@ -54,4 +54,20 @@ class Env
 
         return (bool)$value;
     }
+
+    /*
+     * Get the value of the environment variable as an integer, returning $default if it is not defined.
+     *
+     * Note, that this method maps the string value of "false" (of whatever case) to the PHP boolean type false
+     *
+     */
+    public function getInt(string $key, int $default = 0): int
+    {
+        $value = $this->get($key);
+        if ($value === null) {
+            return $default;
+        }
+
+        return (int)$value;
+    }
 }
